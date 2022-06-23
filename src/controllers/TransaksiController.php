@@ -2,6 +2,11 @@
 
 class TransaksiController extends Controller
 {
+    /**
+     * Index of Transaksi Controller. check route at `public/index.php` for where this method implemented.
+     * @param array $params unsanitized params data from `$_GET` or `$_POST`
+     * @return string|false Response
+     */
     public function index(array $params = [])
     {
         $request = Request::only($params, ['references_id', 'merchant_id']);
@@ -23,7 +28,12 @@ class TransaksiController extends Controller
         }
     }
 
-    public function create($params)
+    /**
+     * Create Method of Transaksi Controller. check route at `public/index.php` for where this method implemented.
+     * @param array $params unsanitized params data from `$_GET` or `$_POST`
+     * @return string|false Response
+     */
+    public function create(array $params = [])
     {
         $request = Request::only($params, ['invoice_id', 'item_name', 'amount', 'payment_type', 'customer_name', 'merchant_id']);
         if (!isset($request['invoice_id']) || !isset($request['merchant_id'])) {
