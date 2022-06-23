@@ -13,9 +13,8 @@ class Transaksi
     }
 
     /**
-     * @param mixed $refId reference_id
-     * @param mixed $merchantId merchant_id
-     * @return mixed reference_id, invoice_id, status | null
+     * @param array $data array of filtered data.
+     * @return array|null references_id, status | null
      */
     public function getStatus($data = [])
     {
@@ -27,7 +26,8 @@ class Transaksi
     }
 
     /**
-     * return references_id,invoice_id, status
+     * @param array $data array of filtered data.
+     * @return number references_id
      */
     public function create($data = [])
     {
