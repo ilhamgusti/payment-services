@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "54d2b0e4-40d0-4f18-ac45-dd94858ff77d",
+		"name": "Payment Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5875180"
+	},
+	"item": [
+		{
+			"name": "Cek Status Transaksi Pembayaran",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/pembayaran?references_id=1&merchant_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"pembayaran"
+					],
+					"query": [
+						{
+							"key": "references_id",
+							"value": "1"
+						},
+						{
+							"key": "merchant_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Data Pembayaran",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "invoice_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "item_name",
+							"value": "Meja",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "payment_type",
+							"value": "virtual_account",
+							"type": "text"
+						},
+						{
+							"key": "customer_name",
+							"value": "Ilham",
+							"type": "text"
+						},
+						{
+							"key": "merchant_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/pembayaran",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"pembayaran"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
