@@ -2,6 +2,12 @@
 
 class Request
 {
+    /**
+     * static method for filtering & sanitizing data from params
+     * @param array $params array of unfiltered data
+     * @param array $only array of selected key
+     * @return array filtered & sanitized data params
+     */
     public static function only($params, array $only)
     {
         $filtered = [];
