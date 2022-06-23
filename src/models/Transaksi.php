@@ -14,7 +14,7 @@ class Transaksi
 
     /**
      * @param array $data array of filtered data.
-     * @return array|null references_id, status | null
+     * @return array|null references_id, invoice_id, status | null
      */
     public function getStatus($data = [])
     {
